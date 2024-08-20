@@ -1,0 +1,8 @@
+<%= turbo_frame_tag "new" do%>
+<%= form_with(model: [@room, @message], data: { controller: "reset_form", action: "turbo:submit-end->reset_form#reset" }) do |form| %>
+    <%= form.text_field :content%>
+    <%= form.submit%>
+<% end %>
+<% end %>
+<%= link_to "back" ,@message.room%>
+

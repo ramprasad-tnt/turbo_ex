@@ -1,0 +1,14 @@
+<%= turbo_frame_tag "room" do %>
+<% content_for :title, "Editing room" %>
+
+<h1>Editing room</h1>
+
+<%= render "form", room: @room %>
+<% end %>
+<br>
+<%= turbo_frame_tag "room" do%>
+<div>
+  <%= link_to "Show this room", @room %> |
+  <%= link_to "Back to rooms", rooms_path %>
+</div>
+<% end %>
